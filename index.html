@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; example</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="demo-styles.css">
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+  </head> 
+<body>
+  <div id="card">
+    <style>
+model-viewer {
+  width: 460px;
+  height: 320px;
+}
+</style>
+    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <model-viewer src="https://cdn.glitch.global/218f8c9b-23fd-48c2-8dee-e7b23833d14f/MICRODRONE.glb?v=1665255923621"
+                  ios-src="https://cdn.glitch.global/218f8c9b-23fd-48c2-8dee-e7b23833d14f/Drone%20v45.usdz?v=1665255932246"
+                  poster="https://cdn.glitch.global/218f8c9b-23fd-48c2-8dee-e7b23833d14f/frame_2020-Jul-29_12-15-26PM-000_CustomizedView11417694521_png_alpha.webp?v=1743235731100"
+                  alt="VR and Ar enabled drone"
+                  shadow-intensity="0" 
+                  camera-controls touch-action="pan-y"
+                  camera-orbit="120deg 60deg 60m"
+                  ar-modes="webxr scene-viewer"
+                  auto-rotate autoplay ar>
+    </model-viewer>
+  </div>
+  
+
+  <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+</body>
+</html>
